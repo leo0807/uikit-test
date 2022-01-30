@@ -3,7 +3,7 @@
     <template #activator>
       <slot name="activator" :on="{ click: onClick }"></slot>
     </template>
-
+    {test}
     <div
       class="f-auth-methods--content"
       :class="{ 'f-auth-methods--mobile': !meta.isDesktop }"
