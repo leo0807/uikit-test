@@ -4,6 +4,7 @@ const webpack = require("@foxone/dev/config/babel-config-webpack.cjs");
 const package = require("./package.json");
 
 const env = process.env.NODE_ENV;
+
 let config = webpack;
 
 if (env === "esm") {

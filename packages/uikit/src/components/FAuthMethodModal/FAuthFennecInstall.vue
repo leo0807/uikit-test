@@ -11,7 +11,6 @@
       </div>
       <f-button color="primary" @click="handleInstall">
         <v-icon size="16" class="mr-1">$install</v-icon>
-
         {{ labels[2] }}
       </f-button>
     </div>

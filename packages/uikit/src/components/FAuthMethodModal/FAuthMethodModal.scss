@@ -38,10 +38,87 @@
   justify-content: center;
   align-items: center;
 
+  &__icon {
+    transition: all .3s ease-in;
+    height: 68px;
+    width: 88px;
+    background-color: #000000;
+    border-radius: 44px;
+  }
+
   &__label {
     font-size: 14px;
     font-weight: 600;
     line-height: 17px;
+  }
+}
+.f-auth-mixin {
+  height: 324px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  &__left {
+    width: 100%;
+    background-image: url('../../assets/background.png');
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0px 0px 32px rgba(181, 183, 189, 0.08);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__phone {
+    height: 100%;
+    margin: 46px 41px 0px 41px;
+    border: 7px double #F2F4F7;
+    padding-top: 34px;
+    border-radius: 32px 32px 0 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    min-width: 190px;
+    max-width: 280px;
+  }
+
+  &__qr {
+    padding: 11px;
+    border: none !important;
+  }
+
+  &__img{
+    margin: auto;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+
+  &__right{
+    padding: 40px;
+    padding-top: 99px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--v-greyscale_3-base);
+  }
+
+  &__link{
+    text-decoration: none;
+    color: var(--v-blue-base) !important;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
   }
 }
 

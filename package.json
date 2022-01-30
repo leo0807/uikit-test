@@ -21,6 +21,9 @@
     "@foxone/dev": "^0.2.10"
   },
   "dependencies": {
+    "@foxone/fennec-dapp": "^0.5.4",
+    "@types/node": "^17.0.17",
+    "axios": "^0.25.0",
     "schema-utils": "^3.1.1"
   }
 }
