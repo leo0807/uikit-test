@@ -1,0 +1,36 @@
+@import "./variable.scss";
+
+@include theme("f-tooltip__content") using ($material) {
+  color: map-deep-get($material, "text", "primary");
+}
+
+.theme--light .f-tooltip__content {
+  filter: drop-shadow(0px 8px 32px rgba(0, 0, 0, 0.12));
+  background-color: var(--v-greyscale_7-base);
+
+  .f-tooltip__arrow {
+    color: var(--v-greyscale_7-base);
+  }
+}
+
+.theme--dark .f-tooltip__content {
+  filter: drop-shadow(0px 8px 32px rgba(255, 255, 255, 0.12));
+  background-color: var(--v-greyscale_5-base);
+
+  .f-tooltip__arrow {
+    color: var(--v-greyscale_5-base);
+  }
+}
+
+.f-tooltip__content.v-tooltip__content {
+  padding: $spacer * 3;
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+.f-tooltip__arrow {
+  position: absolute;
+  height: 12px;
+  width: 23px;
+  display: flex;
+}

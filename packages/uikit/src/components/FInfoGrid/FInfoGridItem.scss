@@ -1,0 +1,31 @@
+@import "./variable";
+
+@include theme("f-info-grid-item") using ($material) {
+  .f-info-grid-item__title {
+    color: map-get($material, "greyscale_3");
+  }
+}
+
+.f-info-grid-item {
+  &__title {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__hint {
+    margin-left: $spacer / 2;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: $spacer;
+  }
+
+  &__unit {
+    margin-left: $spacer / 2;
+  }
+}

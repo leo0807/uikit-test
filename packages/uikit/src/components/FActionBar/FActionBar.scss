@@ -1,0 +1,60 @@
+@import "./variables.scss";
+
+@include theme(f-actionbar) using ($material) {
+  background-color: map-get($material, "actionbar");
+}
+
+.v-item-group.f-actionbar {
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0, 0);
+
+  &:not(.f-actionbar--custom-content) {
+    .v-btn {
+      background-color: transparent;
+      box-shadow: none;
+      flex: 0 1 auto;
+      height: inherit;
+      font-size: $f-actionbar-btn-font-size;
+      min-width: $f-actionbar-btn-min-width;
+      padding: $f-actionbar-btn-padding;
+      position: relative;
+      text-transform: none;
+
+      // &:after,
+      // &:before {
+      //   content: none;
+      // }
+
+      .v-btn__content {
+        flex-direction: column-reverse;
+        height: inherit;
+
+        > *:not(.v-icon) {
+          line-height: 1.2;
+        }
+      }
+
+      &.v-btn--active {
+        color: inherit;
+      }
+    }
+  }
+
+  &:not(.f-actionbar--active) {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.v-item-group.f-actionbar--fixed {
+  position: fixed;
+  z-index: 4;
+}

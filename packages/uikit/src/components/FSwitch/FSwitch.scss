@@ -1,0 +1,26 @@
+@import "~vuetify/src/styles/styles.sass";
+
+@include theme("f-input--switch.v-input--switch") using ($material) {
+  &.v-input--is-dirty {
+    .v-input--switch__thumb {
+      color: map-get($material, "greyscale_7") !important;
+    }
+  }
+}
+
+.f-input--switch.v-input--switch {
+  margin-top: 0px;
+  padding-top: 0px;
+
+  &:not(.v-input--is-dirty) {
+    .v-input--switch__thumb {
+      color: currentColor;
+    }
+
+    .v-input--switch__track {
+      background-color: transparent;
+      border: 2px solid;
+      border-color: inherit !important;
+    }
+  }
+}

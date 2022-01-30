@@ -1,0 +1,67 @@
+@import "./variables.scss";
+
+.f-app-bar {
+  .v-toolbar__content {
+    .v-btn.v-btn--icon.v-size--default {
+      height: $f-app-bar-nav-icon-size;
+      width: $f-app-bar-nav-icon-size;
+    }
+
+    > .v-btn.v-btn--icon {
+      &:first-child {
+        @include ltr() {
+          margin-left: -$f-app-bar-nav-icon-padding;
+        }
+
+        @include rtl() {
+          margin-right: -$f-app-bar-nav-icon-padding;
+        }
+
+        + .v-toolbar__title {
+          @include ltr() {
+            padding-left: $f-app-bar-title-padding;
+          }
+
+          @include rtl() {
+            padding-right: $f-app-bar-title-padding;
+          }
+        }
+      }
+
+      &:last-child {
+        @include ltr() {
+          margin-right: -$f-app-bar-nav-icon-padding;
+        }
+
+        @include rtl() {
+          margin-left: -$f-app-bar-nav-icon-padding;
+        }
+      }
+    }
+  }
+}
+
+.f-app-bar--center {
+  .f-app-bar__nav-icon {
+    z-index: 2;
+  }
+
+  .f-app-bar__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 1;
+  }
+}
+
+.f-app-bar--mixin-immersive {
+  .v-toolbar__content {
+    padding-right: $f-app-bar-immersive-padding;
+  }
+}

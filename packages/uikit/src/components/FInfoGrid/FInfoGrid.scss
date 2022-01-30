@@ -1,0 +1,8 @@
+@import "./variable";
+
+.f-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: $spacer * 2;
+  row-gap: $spacer * 2;
+}

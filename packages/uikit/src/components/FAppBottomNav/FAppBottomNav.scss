@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+// Theme
+@include theme("v-bottom-navigation.f-bottom-navigation") using ($material) {
+  background-color: map-get($material, "bottom-navigation");
+
+  .v-btn:not(.v-btn--active) {
+    color: map-get($material, "bottom-navigation-inactive") !important;
+  }
+}
+
+.v-item-group.v-bottom-navigation.f-bottom-navigation {
+  justify-content: space-around;
+  padding-bottom: constant(safe-area-inset-bottom) !important;
+  padding-bottom: env(safe-area-inset-bottom) !important;
+  box-sizing: content-box;
+}
+
+.v-item-group.v-bottom-navigation.f-bottom-navigation {
+  &--flat {
+    box-shadow: none;
+  }
+}
+
+.f-bottom-navigation {
+  .v-btn {
+    &::before {
+      content: none;
+    }
+  }
+
+  .v-ripple__container {
+    display: none;
+  }
+}

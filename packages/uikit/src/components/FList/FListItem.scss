@@ -1,0 +1,38 @@
+@import "./variable";
+
+@include theme("v-list-item.f-list-item") using ($material) {
+  .f-list-item__subtitle {
+    color: map-get($material, "greyscale_3");
+  }
+}
+
+.f-list-item {
+  min-height: 72px;
+
+  &__head {
+    margin-right: $spacer * 4;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  &__tail,
+  &__value {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__tail {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

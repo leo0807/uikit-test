@@ -1,0 +1,60 @@
+@import "./variable.scss";
+
+@include theme("v-text-field.f-input") using ($material) {
+  .f-input__tools {
+    color: map-deep-get($material, "text", "primary");
+  }
+
+  &.error--text .v-input__slot {
+    background-color: map-deep-get(
+      $material,
+      "text-fields",
+      "error-background"
+    );
+  }
+
+  &.v-input--is-disabled .v-input__slot {
+    background-color: map-get($material, "greyscale_5");
+  }
+}
+
+.v-text-field.f-input {
+  font-size: 16px;
+
+  & > .v-input__control > .v-input__slot {
+    overflow: hidden;
+    font-weight: 600;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+
+  .v-label {
+    font-size: 16px;
+  }
+
+  .v-progress-linear {
+    top: calc(100% - 2px);
+  }
+
+  &.v-text-field--enclosed {
+    .v-text-field__details {
+      padding: 0;
+    }
+  }
+
+  .v-input__icon--clear {
+    .v-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.f-input__tools {
+  font-size: $f-input-tool-font-size;
+  padding: 0;
+  margin: $spacer 0;
+}

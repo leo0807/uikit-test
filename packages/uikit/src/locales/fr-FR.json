@@ -1,0 +1,24 @@
+{
+  "uikit": {
+    "balance_short": "Bal",
+    "connect_wallet": "Connect wallet",
+    "connect_wallet_subtitle": "Connect with one of our available wallet providers.",
+    "search": "Search",
+    "select_asset": "Select asset",
+    "select_phone_code": "Select phone code",
+    "phone_number": "Phone Number",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "more": "More",
+    "fold": "Fold",
+    "fennec_wallet_subtitle": "Mixin Network Browser Wallet",
+    "mixin_wallet_subtitle": "iOS & Android Wallet",
+    "links_wallet_subtitle": "iOS & Android Wallet",
+    "details": "Details",
+    "close": "Close",
+    "learn_more": "Learn More",
+    "install": "Install",
+    "fennec_not_installed": "Fennec not installed",
+    "fennec_introduction": "Fennec is a Mixin network browser wallet, you need to install Fennec before the connection."
+  }
+}

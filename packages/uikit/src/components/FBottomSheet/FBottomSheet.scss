@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+// Theme
+@include theme("f-bottom-sheet") using ($material) {
+  background-color: map-get($material, "bottom-sheet");
+}
+
+.f-bottom-sheet.v-dialog:not(.f-bottom-sheet--no-padding) {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.f-bottom-sheet.v-dialog,
+.f-bottom-sheet.v-menu__content {
+  .f-bottom-sheet__close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 11;
+  }
+
+  .f-bottom-sheet__title {
+    display: flex;
+    justify-content: center;
+    padding: $spacer * 6 $spacer * 4;
+    font-weight: $bottom-sheet-title-font-weight;
+    font-size: $bottom-sheet-title-font-size;
+
+    + .f-bottom-sheet__subtitle {
+      padding-top: 0;
+    }
+  }
+
+  .f-bottom-sheet__subtitle {
+    padding: $spacer * 6 $spacer * 4;
+  }
+}
+
+.f-bottom-sheet.v-dialog {
+  position: relative;
+}
+
+.f-bottom-sheet.v-bottom-sheet.v-dialog {
+  border-top-left-radius: $bottom-sheet-border-radius;
+  border-top-right-radius: $bottom-sheet-border-radius;
+}
